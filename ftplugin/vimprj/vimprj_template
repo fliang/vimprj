@@ -1,0 +1,29 @@
+[default]
+# Add your project name here.
+# It will be used as prefix for tag files.
+project_name = your_project_name
+
+# Your project root path. All src codes are located in this path.
+# MUST be one absolute path.
+project_root_path = /your/project/src
+
+# The value is a regex pattern with case-ignored. (Python like regex syntax)
+# The file will be added into filename lookup tags used by 'lookupfile' plugin(vim script #1581),
+# if its name get catched by the regex.
+# :help LookupFile_UsingSpecializedTags
+filename_finding_pattern = ^((GNU)?Makefile|.+\.(cpp|c|h|hpp|cc|cxx|vim|py|ini|xml|cfg|sql|java|sh|mk))$
+
+# Add excluding path here. MUST be separated by comma.
+# To avoid generate filename tags and ctags for files in these path(s).
+# The path(s) will be used by 'lookupfile' plugin(vim script #1581)
+# and the '--exclude=' parameter of 'ctags' command
+# :help LookupFile_UsingSpecializedTags
+# see ctags' manual: http://ctags.sourceforge.net/ctags.html
+project_excluding_path = .svn,.hg,Documentation
+
+# Project update frequence (minute), non-positive means disable.
+project_update_interval = 30
+
+# External ctags files, MUST be separated by comma
+# MUST be absolute path
+project_external_ctags_files = /another1/tag_file,/another2/tag_file
